@@ -1,4 +1,3 @@
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Welcome to OOP");
@@ -8,12 +7,16 @@ public class Main {
 
         macos.setOs("Ventura13.2");
         macos.setSsd(256);
-        System.out.println(macos);
+
+        System.out.println(macos.getOs() + " " + macos.getSsd());
+        System.out.println(hp.getOs() + " " + hp.getSsd());
+        System.out.println(hpPro.getOs() + " " + hpPro.getSsd());
+
         System.out.println(hp);
         System.out.println(hpPro);
+        System.out.println(macos);
 
-
-        System.out.println(hp == macos);
+//      Они сравниваються по ssd соответственно выдает тру, так как ssd одинаковые, а os он не сравнивает
         System.out.println(hp.equals(macos));
         }
     }
