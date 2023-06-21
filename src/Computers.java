@@ -25,4 +25,24 @@ public class Computers {
     public void setSsd(int ssd) {
         this.ssd = ssd;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null) return false;
+        if (!(o instanceof Computers)) return false;
+        Computers hp = (Computers) o;
+        return ssd == hp.ssd;
+        // оставил только ssd, хочу по нему делать сравнение, но можно и return ssd == hp.ssd || os.equals(hp.os); вот так прописать,
+        // тогда он будет давать тру при хотя бы одном из двух положительном сравнении... В задании вроде указывалось конкретно по одному)
+        // но в любом варианте главное, что работает метод верно))
+    }
+
+    @Override
+    public String toString() {
+        return "Computers:" +
+                "os='" + os + '\'' +
+                ", ssd=" + ssd;
+// Пожеланию чуть переписал, так как фигурные скобки тут не красиво смотрятся)))
+    }
 }
